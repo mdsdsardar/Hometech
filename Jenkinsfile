@@ -47,11 +47,11 @@ pipeline{
     }
 
     stages{
-        stage("Github automation"){
-            steps{    
-                git branch: 'master', url: 'https://github.com/mdsdsardar/Hometech.git'
-            }
-        }
+        // stage("Github automation"){
+        //     steps{    
+        //         git branch: 'master', url: 'https://github.com/mdsdsardar/Hometech.git'
+        //     }
+        // }
         stage('Build'){
             steps{
                  sh script: 'mvn clean package'
@@ -74,7 +74,7 @@ pipeline{
                     nexusUrl: '172.31.33.191:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'http://65.2.38.7:8081/repository/simpleapp-release/', 
+                    repository: 'http://65.2.38.7:8081/repository/simpleapp-release', 
                     version: '3.0.0'
 
 
