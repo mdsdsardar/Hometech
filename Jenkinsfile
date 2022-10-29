@@ -49,7 +49,7 @@ pipeline{
     stages{
         stage("Github automation"){
             steps{    
-                git branch: 'main', url: 'https://github.com/mdsdsardar/Hometech.git'
+                git branch: 'master', url: 'https://github.com/mdsdsardar/Hometech.git'
             }
         }
         stage('Build'){
